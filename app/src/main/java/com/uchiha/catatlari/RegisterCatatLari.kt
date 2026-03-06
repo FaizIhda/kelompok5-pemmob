@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Fragment_Register_CatatLari.newInstance] factory method to
+ * Use the [RegisterCatatLari.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Fragment_Register_CatatLari : Fragment() {
+class RegisterCatatLari : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class Fragment_Register_CatatLari : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment__register__catat_lari, container, false)
+        return inflater.inflate(R.layout.fragment_register_catat_lari, container, false)
     }
 
     companion object {
@@ -44,12 +44,12 @@ class Fragment_Register_CatatLari : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Fragment_Register_CatatLari.
+         * @return A new instance of fragment RegisterCatatLari.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Fragment_Register_CatatLari().apply {
+            RegisterCatatLari().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

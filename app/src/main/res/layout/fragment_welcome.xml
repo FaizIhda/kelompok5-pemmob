@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#0D47A1">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/icon_orang"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPN Run"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pantau aktivitas lari dan kesehatanmu setiap hari"
+        android:textColor="#E3F2FD"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btnMulai"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Mulai"
+        android:textStyle="bold"
+        android:backgroundTint="#12D01B"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/txtDesc1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUDAH PUNYA AKUN? LOGIN"
+        android:textStyle="bold"
+        android:textColor="#E3F2FD"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"/>
+
+</LinearLayout>

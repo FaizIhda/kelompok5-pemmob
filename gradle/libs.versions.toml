@@ -23,4 +23,5 @@ androidx-cardview = { group = "androidx.cardview", name = "cardview", version.re
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version = "2.9.7" }
 

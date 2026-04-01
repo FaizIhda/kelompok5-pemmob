@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +35,8 @@ class nyoba : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nyoba, container, false)
+//        return inflater.inflate(R.layout.fragment_nyoba, container, false)
+        return null
     }
 
     companion object {
@@ -56,4 +58,82 @@ class nyoba : Fragment() {
                 }
             }
     }
-}
+
+//    private lateinit var loginBinding: FragmentLoginBinding
+//
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        // Inflate the layout for this fragment
+//        loginBinding = FragmentLoginBinding.inflate(
+//            inflater,
+//            container,
+//            false
+//        )
+//
+//        return loginBinding.root
+//    }
+
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        loginBinding.buttonLogin.setOnClickListener {
+//            val emailUser = loginBinding.etEmail.text.toString()
+//            val passwordUser = loginBinding.etPassword.text.toString()
+//
+//            if (emailUser.isEmpty() || passwordUser.isEmpty())
+//                Toast.makeText(requireContext(), "Silahkan masukkan email/password, bro!", Toast.LENGTH_SHORT).show()
+//            else {
+//                // jika password salah, muncul pesan error
+//                if (passwordUser != "123456")
+//                    Toast.makeText(requireContext(), "Password Anda salah!", Toast.LENGTH_SHORT).show()
+//                // jika password benar, maka berpindah ke MainActivity
+//                else {
+//                    val userLogin = user(email = emailUser, password= passwordUser)
+//                    // berpindah ke MainActivity
+//                    val intent = Intent(requireContext(), MainActivity::class.java)
+//                    startActivity(intent)
+//                }
+//            }
+//
+//        }
+//    }
+
+    // welcome fragment
+//    private lateinit var binding: FragmentWelcomeBinding
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//
+//    }
+//
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        // Inflate the layout for this fragment
+//        binding = FragmentWelcomeBinding.inflate(
+//            inflater,
+//            container,
+//            false
+//        )
+//
+//        return binding.root
+//    }
+//
+//
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        binding.btnLogin.setOnClickListener {
+//            findNavController().navigate(
+//                WelcomeFragmentDirections.actionWelcomeFragmentToLoginFragment())
+//        }
+//
+//        binding.btnSignup.setOnClickListener {
+//            findNavController().navigate(
+//                WelcomeFragmentDirections.actionWelcomeFragmentToRegisterFragment()
+//            )
+//        }
+    }

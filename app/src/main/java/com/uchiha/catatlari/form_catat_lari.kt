@@ -51,7 +51,10 @@ class form_catat_lari : Fragment() {
                 Toast.makeText(requireContext(), "Silahkan isi kotak yang kosong, bro!", Toast.LENGTH_SHORT).show()
             else {
                 val simpanCatatLari = dataLari(tanggalLari, jarakLari, durasiLari)
-                Toast.makeText(requireContext(), "Pencatatan berhasil disimpan!", Toast.LENGTH_SHORT).show()
+                FormcatatBinding.inputTanggal.setText("")
+                FormcatatBinding.inputJarak.setText("")
+                FormcatatBinding.inputDurasi.setText("")
+                Toast.makeText(requireContext(), "Pencatatan lari sejauh $jarakLari km selama $durasiLari menit disimpan!", Toast.LENGTH_SHORT).show()
 //                findNavController().
             }
         }

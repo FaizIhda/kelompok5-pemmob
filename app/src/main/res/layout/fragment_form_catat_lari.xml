@@ -116,7 +116,7 @@
         android:id="@+id/inputDurasi"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:hint="Contoh durasi: 1 jam 30 detik"
+        android:hint="Contoh durasi: 12 menit"
         android:inputType="number"
 
         app:layout_constraintStart_toStartOf="parent"

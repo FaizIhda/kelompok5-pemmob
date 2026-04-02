@@ -24,7 +24,8 @@ class BerandaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Logika untuk berpindah ke halaman form catat lari saat FAB diklik
+        // MENGAKTIFKAN LOGIKA KLIK:
+        // Saat tombol plus hijau (btnStartRun) diklik, pindah ke halaman Form Catat Lari
         binding.btnStartRun.setOnClickListener {
             findNavController().navigate(R.id.action_berandaFragment_to_formCatatLari)
         }

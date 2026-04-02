@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.uchiha.catatlari.databinding.FragmentFormCatatLariBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -50,8 +51,8 @@ class form_catat_lari : Fragment() {
                 Toast.makeText(requireContext(), "Silahkan isi kotak yang kosong, bro!", Toast.LENGTH_SHORT).show()
             else {
                 val simpanCatatLari = dataLari(tanggalLari, jarakLari, durasiLari)
-                println()
                 Toast.makeText(requireContext(), "Pencatatan berhasil disimpan!", Toast.LENGTH_SHORT).show()
+//                findNavController().
             }
         }
     }

@@ -29,7 +29,8 @@ class WelcomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnMulai.setOnClickListener{
             findNavController().navigate(
-                WelcomeFragmentDirections.actionWelcomeFragmentToRegisterCatatLari2()
+
+                WelcomeFragmentDirections.actionWelcomeFragmentToRegisterCatatLari()
             )
         }
     }

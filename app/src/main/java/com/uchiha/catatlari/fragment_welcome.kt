@@ -30,7 +30,7 @@ class WelcomeFragment : Fragment() {
         binding.btnMulai.setOnClickListener{
             findNavController().navigate(
 
-                WelcomeFragmentDirections.actionWelcomeFragmentToRegisterCatatLari()
+                WelcomeFragmentDirections.actionWelcomeFragmentToLoginFragment2()
             )
         }
     }

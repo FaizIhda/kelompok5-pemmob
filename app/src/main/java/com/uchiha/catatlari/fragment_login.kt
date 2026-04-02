@@ -1,59 +1,63 @@
 package com.uchiha.catatlari
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
-import com.google.android.material.textfield.TextInputEditText
+import androidx.navigation.fragment.findNavController
+import com.uchiha.catatlari.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
+
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate layout fragment_login
-        val view = inflater.inflate(R.layout.fragment_login, container, false)
+    ): View {
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        // Inisialisasi View
-        val etEmail = view.findViewById<TextInputEditText>(R.id.etEmail)
-        val etPassword = view.findViewById<TextInputEditText>(R.id.etPassword)
-        val btnLogin = view.findViewById<Button>(R.id.btnLogin)
-        val tvRegisterLink = view.findViewById<TextView>(R.id.tvRegisterLink)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // Logic Klik Tombol Login
-        btnLogin.setOnClickListener {
-            val email = etEmail.text.toString().trim()
-            val password = etPassword.text.toString().trim()
+        // Logic Tombol Login
+        binding.btnLogin.setOnClickListener {
+            val email = binding.etEmail.text.toString().trim()
+            val password = binding.etPassword.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(requireContext(), "Email dan Password harus diisi!", Toast.LENGTH_SHORT).show()
             } else {
-                // Simulasi verifikasi login
+                // Simulasi verifikasi (Sesuai permintaanmu)
                 if (email == "user@email.com" && password == "12345") {
                     Toast.makeText(requireContext(), "Selamat Datang!", Toast.LENGTH_SHORT).show()
 
-                    // Pindah ke MainActivity
-                    val intent = Intent(requireContext(), MainActivity::class.java)
-                    startActivity(intent)
-                    activity?.finish()
+                    // PINDAH KE BERANDA MENGGUNAKAN NAVIGATION COMPONENT
+                    // Pastikan action ini sudah ada di nav_graph.xml
+                    findNavController().navigate(
+                        LoginFragmentDirections.actionLoginFragment2ToBerandaFragment()
+                    )
                 } else {
                     Toast.makeText(requireContext(), "Email atau Password salah", Toast.LENGTH_SHORT).show()
                 }
             }
         }
 
-        // Logic Klik link "Daftar"
-        tvRegisterLink.setOnClickListener {
-            // Di sini kamu bisa tambahkan perpindahan ke Fragment Registrasi
-            Toast.makeText(requireContext(), "Membuka halaman pendaftaran...", Toast.LENGTH_SHORT).show()
+        // Logic link ke Register (Jika diperlukan)
+        binding.tvRegisterLink.setOnClickListener {
+            findNavController().navigate(
+                LoginFragmentDirections.actionLoginFragment2ToRegisterCatatLari()
+            )
         }
+    }
 
-        return view
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

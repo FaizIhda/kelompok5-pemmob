@@ -8,14 +8,35 @@
         android:id="@+id/registerCatatLari"
         android:name="com.uchiha.catatlari.RegisterCatatLari"
         android:label="fragment_register_catat_lari"
-        tools:layout="@layout/fragment_register_catat_lari" />
+        tools:layout="@layout/fragment_register_catat_lari" >
+        <action
+            android:id="@+id/action_registerCatatLari_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.uchiha.catatlari.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
-            android:id="@+id/action_welcomeFragment_to_registerCatatLari"
-            app:destination="@id/registerCatatLari" />
+            android:id="@+id/action_welcomeFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.uchiha.catatlari.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_registerCatatLari"
+            app:destination="@id/registerCatatLari" />
+        <action
+            android:id="@+id/action_loginFragment2_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.uchiha.catatlari.BerandaFragment"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_beranda" />
 </navigation>

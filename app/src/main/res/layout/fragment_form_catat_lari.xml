@@ -13,7 +13,7 @@
         android:layout_height="75dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:background="@color/blue"
+        android:background="@color/blue_primary"
         android:orientation="vertical"
 
         app:layout_constraintTop_toTopOf="parent"
@@ -129,7 +129,7 @@
         android:layout_width="320dp"
         android:layout_height="45dp"
         android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/blue_primary"
         android:text="Simpan"
 
         app:layout_constraintStart_toStartOf="parent"

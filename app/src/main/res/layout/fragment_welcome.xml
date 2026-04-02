@@ -12,10 +12,11 @@
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/icon_orang"
-        android:layout_marginBottom="24dp"/>
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo_upnrun"
+        android:layout_marginBottom="24dp"
+        android:scaleType="fitCenter"/>
 
     <TextView
         android:id="@+id/txtTitle"

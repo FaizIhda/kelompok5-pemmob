@@ -20,7 +20,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 
-data class dataLari(val simpanLari: String, val simpanJarak: String, val simpanDurasi: String)
+
 
 class form_catat_lari : Fragment() {
     private lateinit var FormcatatBinding: FragmentFormCatatLariBinding

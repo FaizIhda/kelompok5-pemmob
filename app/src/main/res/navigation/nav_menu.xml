@@ -38,5 +38,14 @@
         android:id="@+id/berandaFragment"
         android:name="com.uchiha.catatlari.BerandaFragment"
         android:label="fragment_beranda"
-        tools:layout="@layout/fragment_beranda" />
+        tools:layout="@layout/fragment_beranda">
+        <action
+            android:id="@+id/action_berandaFragment_to_formCatatLari"
+            app:destination="@id/formCatatLari" />
+    </fragment>
+    <fragment
+        android:id="@+id/formCatatLari"
+        android:name="com.uchiha.catatlari.form_catat_lari"
+        android:label="fragment_form_catat_lari"
+        tools:layout="@layout/fragment_form_catat_lari" />
 </navigation>

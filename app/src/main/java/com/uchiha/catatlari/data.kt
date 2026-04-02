@@ -6,3 +6,5 @@ data class DataUser(
     val email: String,
     val password: String
 )
+
+data class dataLari(val simpanLari: String, val simpanJarak: String, val simpanDurasi: String)
